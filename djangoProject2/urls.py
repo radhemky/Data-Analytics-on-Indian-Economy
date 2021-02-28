@@ -5,7 +5,7 @@ from djangoProject2 import views
 urlpatterns = {
     path('', views.index),
     path('DIGITAL_PAYMENT.html', views.DIGITAL_PAYMENT),
-    path('Overall_Unemployment.html',views.Overall_Unemployment),
+    path('Overall_Employment.html',views.Overall_Unemployment),
     path('Female_Unemployment.html',views.Female_Unemployment),
     path('taxes_of_each_year.html',views.taxes_of_each_year),
     path('Male_Unemployment.html',views.Male_Unemployment),
@@ -14,7 +14,7 @@ urlpatterns = {
     path('Employment_in_Industries.html',views.Employment_in_Industries),
     path('Employed_vs_Unemployed.html',views.Employed_vs_Unemployed),
     path('Corporate_and_Personal_Taxes.html',views.Corporate_and_Personal_Taxes),
-    path('STOCK_MARKET.html',views.STOCK_MARKET),
+    path('News_&_Update.html',views.News_and_update),
     path('Seasonality_and_trend_of_GDP.html',views.Seasonality_and_trend_of_GDP),
     path('Return_field_by_category.html',views.Return_field_by_category),
     path('COVID_19.html',views.COVID_19),

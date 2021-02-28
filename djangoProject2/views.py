@@ -23,13 +23,13 @@ def login(request):
 def Male_Unemployment(request):
     return render(request, 'Male_Unemployment.html', {})
 def Overall_Unemployment(request):
-    return render(request, 'Overall_Unemployment.html', {})
+    return render(request, 'Overall_Employment.html', {})
 def Return_field_by_category(request):
     return render(request, 'Return_field_by_category.html', {})
 def Seasonality_and_trend_of_GDP(request):
     return render(request, 'Seasonality_and_trend_of_GDP.html', {})
-def STOCK_MARKET(request):
-    return render(request, 'STOCK_MARKET.html', {})
+def News_and_update(request):
+    return render(request, 'News_&_Update.html', {})
 def taxes_of_each_year(request):
     return render(request, 'taxes_of_each_year.html', {})
 def Total_Tax(request):
