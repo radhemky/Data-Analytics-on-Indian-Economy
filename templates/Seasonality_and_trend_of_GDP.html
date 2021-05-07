@@ -133,23 +133,12 @@
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Sample Graph
-						<ul class="pull-right panel-settings panel-button-tab-right">
-							<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
-								<em class="fa fa-cogs"></em>
-							</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li>
-										<ul class="dropdown-settings">
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
+						Seasonality and trend of GDP Graph
+
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
 					<div class="panel-body">
 						<div class="canvas-wrapper">
-							<canvas class="main-chart " id="mine-chart" height="100" width="600"></canvas>
+							<canvas class="main-chart " id="liechart" height="100" width="600"></canvas>
 						</div>
 					</div>
 				</div>
@@ -170,7 +159,7 @@
 		<div>
 
 			<div class="col-sm-12">
-				<p class="back-link">DEV TEAM BY <a href="https://www.medialoot.com">RADHE & SOUVIK</a></p>
+				<p class="back-link navbar-fixed-bottom">DEV TEAM BY <a href="https://www.medialoot.com">RADHE & SOUVIK</a></p>
 			</div>
 		</div><!--/.row-->
 	</div>	<!--/.main-->
@@ -186,14 +175,14 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
 <script>
 
-var ctx = document.getElementById("line-chart").getContext('2d');
+var ctx = document.getElementById("liechart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
         datasets: [{
-            label: 'Data of Chart',
-            data: [5.84000015258789,5.80999994277954,5.8600001335144,5.78999996185303,5.71999979019165,5.61999988555908,5.5,5.36999988555908,5.42000007629395,5.59000015258789,5.59999990463257,5.6399998664856,5.67000007629395,5.67000007629395,5.59999990463257,5.55000019073486,5.5,5.42000007629395,5.34000015258789,5.28000020980835],
+            label: 'Trend of Gdp',
+            data: [3.84099115681285,4.82396626390641,3.8039753213758,7.86038147553259,7.92293661286503,7.92343062149763,8.06073257303272,7.66081506504928,3.08669805953289,7.86188883303498,8.49758470158106,5.2413447428854,5.45635895072287,6.38610640094825,7.41022760508854,7.99625344413879,8.2563058441893,7.04382085537057,6.11958684136602,4.18072762475113],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
