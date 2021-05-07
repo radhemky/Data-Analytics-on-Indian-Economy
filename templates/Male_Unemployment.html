@@ -77,9 +77,6 @@
 					<li><a class="" href="Corporate_and_Personal_Taxes.html">
 						<span class="fa fa-square">&nbsp;</span> Corporate and Personal Taxes
 					</a></li>
-					<li><a class="" href="taxes_of_each_year.html">
-						<span class="fa fa-square">&nbsp;</span> taxes of each year
-					</a></li>
 					<li><a class="" href="Total_Tax.html">
 						<span class="fa fa-square">&nbsp;</span> Total Tax
 					</a></li>
@@ -102,8 +99,6 @@
 			</li>
 			<li><a href="DIGITAL_PAYMENT.html"><em class="fa fa-tablet">&nbsp;</em> DIGITAL PAYMENT </a></li>
 			<li><a href="GDP_GROWTH.html"><em class="fa fa-line-chart">&nbsp;</em> GDP GROWTH </a></li>
-			<li><a href="News_&_Update.html"><em class="fa fa-btc">&nbsp;</em> NEWS & UPDATES </a></li>
-			<li><a href="COVID_19.html"><em class="fa fa-heartbeat">&nbsp;</em> COVID-19 </a></li>
 			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -123,14 +118,62 @@
 				<h1 class="page-header">Male Unemployment</h1>
 			</div>
 		</div><!--/.row-->
-		
-		<div class="panel panel-container">
-			<div class="row">
-				
+        <div class="panel panel-container">
+			<div>
+
+					Due to lack of data regarding the employment of various sectors
+					we could not accommodate those into the employment dataset.<br>
+					We tried calculate the rate at which we need to increase employ-
+					ment to accommodate the entire working population in the work-
+					force in the next decade or so. But, we could not find a suitable
+
 			</div><!--/.row-->
 		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Sample Graph
+						<ul class="pull-right panel-settings panel-button-tab-right">
+							<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
+								<em class="fa fa-cogs"></em>
+							</a>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li>
+										<ul class="dropdown-settings">
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+					<div class="panel-body">
+						<div class="canvas-wrapper">
+							<canvas class="main-chart " id="line-chart" height="100" width="600"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+
+		<div class="panel panel-container">
+			<div>
+
+					Due to lack of data regarding the employment of various sectors
+					we could not accommodate those into the employment dataset.<br>
+					We tried calculate the rate at which we need to increase employ-
+					ment to accommodate the entire working population in the work-
+					force in the next decade or so. But, we could not find a suitable
+
+			</div><!--/.row-->
+		</div>
+		<div>
+
+			<div class="col-sm-12">
+				<p class="back-link">DEV TEAM BY <a href="https://www.medialoot.com">RADHE & SOUVIK</a></p>
+			</div>
+		</div><!--/.row-->
 	</div>	<!--/.main-->
-	
 	<script src="{% static 'website/js/jquery-1.11.1.min.js' %}"></script>
 	<script src="{% static 'website/js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'website/js/chart.min.js' %}"></script>
@@ -140,17 +183,45 @@
 	<script src="{% static 'website/js/bootstrap-datepicker.js' %}"></script>
 	<script src="{% static 'website/js/custom.js' %}"></script>
 
-	<script>
-		window.onload = function () {
-	var chart1 = document.getElementById("line-chart").getContext("2d");
-	window.myLine = new Chart(chart1).Line(lineChartData, {
-	responsive: true,
-	scaleLineColor: "rgba(0,0,0,.2)",
-	scaleGridLineColor: "rgba(0,0,0,.05)",
-	scaleFontColor: "#c5c7cc"
-	});
-};
-	</script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+<script>
+
+var ctx = document.getElementById("line-chart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019"],
+        datasets: [{
+            label: 'Data of Chart',
+            data: [5.84000015258789,5.80999994277954,5.8600001335144,5.78999996185303,5.71999979019165,5.61999988555908,5.5,5.36999988555908,5.42000007629395,5.59000015258789,5.59999990463257,5.6399998664856,5.67000007629395,5.67000007629395,5.59999990463257,5.55000019073486,5.5,5.42000007629395,5.34000015258789,5.28000020980835],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: false
+            }
+        }
+    }
+});
+</script>
 		
 </body>
 </html>
