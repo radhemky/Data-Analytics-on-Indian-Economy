@@ -1,3 +1,4 @@
+import view as view
 from django.contrib import admin
 from django.urls import path
 from djangoProject2 import views
@@ -22,7 +23,11 @@ urlpatterns = {
     path('Wage_and_Salaried_workers.html',views.Wage_and_Salaried_workers),
     path('Total_Tax.html',views.Total_Tax),
     path('Vulnerable_Employment.html',views.Vulerable_Employment),
-    path('index.html',views.index)
+    path('index.html',views.index),
+    path('hello',views.hello),
+    path('data',views.data),
+    path('ana',views.ana)
+
 
 
 }
