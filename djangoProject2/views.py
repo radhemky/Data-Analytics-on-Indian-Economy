@@ -7,7 +7,7 @@ import sys
 
 
 def index(request):
-    return render(request, 'index.html', {})
+    return render(request, 'Employed_vs_Unemployed.html', {})
 
 
 def Corporate_and_Personal_Taxes(request):
@@ -84,19 +84,20 @@ def Wage_and_Salaried_workers(request):
 
 def hello(request):
     inp = request.POST.get('param')
-    out = run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//gdp.py',inp ],
+    plus = inp
+    out = run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//gdp.py', inp],
               shell=False, stdout=PIPE, universal_newlines=True)
 
-    return render(request, 'taxes_of_each_year.html', {'data1': out.stdout})
+    return render(request, 'taxes_of_each_year.html', {'data1': out.stdout, 'data2': plus})
 
 
 def ana(request):
-    run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//AnalyzeData.py',],
+    run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//AnalyzeData.py', ],
         shell=False, stdout=PIPE, universal_newlines=True)
     return render(request, 'News_&_Update.html', {})
 
 
 def data(request):
-    run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//CleanData.py',],
+    run([sys.executable, '//home//cheeryluck//PycharmProjects//djangoProject2//djangoProject2//CleanData.py', ],
         shell=False, stdout=PIPE, universal_newlines=True)
     return render(request, 'News_&_Update.html', {})

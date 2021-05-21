@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Wage and Salaried workers</title>
+	<title>Gdp Prediction</title>
 	<link href="{% static 'website/css/bootstrap.min.css' %}" rel="stylesheet">
 	<link href="{% static 'website/css/font-awesome.min.css' %}" rel="stylesheet">
 	<link href="{% static 'website/css/datepicker3.css' %}" rel="stylesheet">
@@ -111,13 +111,13 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">gdp prediction</li>
+				<li class="active">Gdp Prediction</li>
 			</ol>
 		</div><!--/.row-->
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">gdp prediction</h1>
+				<h1 class="page-header">Gdp Prediction</h1>
 			</div>
 		</div><!--/.row-->
 <div class="container"> <div class=" text-center mt-5 ">
@@ -132,7 +132,7 @@
                             <div class="controls">
                                 <div class="row">
                                     <div class="col-md-12 centered">
-                                        <div class="form-group"><input id="form_name" type="text" name="param" value="param" class="form-control text-center" placeholder="Enter the year for Prediction" required="required" data-error="year is required."> </div>
+                                        <div class="form-group"><input id="form_name" type="text" name="param" value="{{data2}}" class="form-control text-center" placeholder="Enter the year for Prediction" required="required" data-error="year is required."> </div>
                                     </div>
                                     <div class="col-md-12 mx-auto">
                                         {% csrf_token %}
